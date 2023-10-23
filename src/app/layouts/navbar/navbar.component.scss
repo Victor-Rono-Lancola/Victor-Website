@@ -1,0 +1,43 @@
+.navbar {
+  background: #fff;
+  padding: 20px;
+
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-menu{
+    ul{
+      display: flex;
+
+      li{
+        a{
+          padding: 10px 20px;
+          display: block;
+          font-weight: 600;
+          transition: 0.5s;
+
+          &:hover{
+            color: var(--primary-color);
+          }
+
+          &:last-child {
+            a{
+            margin-left: 10px;
+            }
+          }
+
+          i{
+            margin-right: 10px;
+          }
+        }
+
+        
+      }
+    }
+  }
+
+}
