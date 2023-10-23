@@ -1,0 +1,41 @@
+/* Hero */
+.hero {
+  margin-bottom: 50px;
+
+  .container {
+    background: url('../../../../../../src/assets/images/hero-bg.png') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 550px;
+  }
+
+  .hero-content {
+    width: 70%;
+
+    .hero-text {
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+
+
+/* Video */
+.video {
+  padding: 10px 0 40px;
+
+  .video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .video-preview {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+// // .video
