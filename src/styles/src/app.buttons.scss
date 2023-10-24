@@ -17,12 +17,12 @@
 
   &.btn-primary{
     background: var(--primary-color);
-    color: #fff;
+    color: var(--default-bg-color);
   }
 
   &.btn-dark{
     background: var(--dark-color);
-    color: #fff;
+    color: var(--default-bg-color);
   }
 
   &.btn-block{
