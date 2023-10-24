@@ -1,5 +1,5 @@
 import { FAQData } from './../../../../shared/data/FAQ.data';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { testimonialsData } from 'src/app/shared/data/testimonials.data';
 
 @Component({
@@ -8,12 +8,30 @@ import { testimonialsData } from 'src/app/shared/data/testimonials.data';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  // @ViewChild('faqContent');
+  @ViewChild('faqContent') faqContent: ElementRef | null = null;
   testimonials = testimonialsData;
   FAQ = FAQData;
 
 
-  toggleFAQ() {
+  ngAfterViewInit() {
+    this.toggleFAQ();
+  }
 
+  toggleFAQ() {
+    this.faqContent?.nativeElement.addEventListener('click', (event: Event) => {
+
+      const groupHeader = (event.target as HTMLElement)?.closest('.faq-group-header');
+      const group = groupHeader?.parentElement;
+      const groupBody = group?.querySelector('.faq-group-body');
+      const icon = groupHeader?.querySelector('.icon');
+
+      // toggle icon
+      icon?.classList.toggle('fa-plus');
+      icon?.classList.toggle('fa-minus');
+
+      // toggle body
+      groupBody?.classList.toggle('open');
+
+    })
   }
 }
