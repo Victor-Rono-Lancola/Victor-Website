@@ -55,7 +55,7 @@
 /* Background */
 .bg-primary {
   background: var(--primary-color);
-  color: #fff;
+  color: var(--default-bg-color);
 }
 
 .bg-light {
@@ -65,10 +65,29 @@
 
 .bg-dark {
   background: var(--dark-color);
-  color: #fff;
+  color: var(--default-bg-color);
 }
 
 .bg-black {
-  background: #000;
-  color: #fff;
+  background: var(--dark-color) !important;
+  color: var(--white);
+}
+
+/* Card */
+.card {
+  background: var(--default-bg-color);
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+/* Card */
+.card-dark {
+  background: var(--dark-color);
+  color: var(--default-bg-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+p{
+  // font-family: sans-serif;
 }
