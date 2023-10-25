@@ -17,5 +17,24 @@
         </li>
       </ul>
     </div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger-button">
+      <div *ngFor="let i of [1,2,3]" class="hamburger-line"></div>
+    </button>
+
+    <div class="mobile-menu">
+      <ul>
+        <li *ngFor="let link of navLinks">
+          <a [routerLink]="link.url" [ngClass]="{'btn': link.button}">
+            <i *ngIf="link.icon" class="fas" [ngClass]="link.icon"></i>
+            {{link.title}}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+
   </div>
 </nav>
