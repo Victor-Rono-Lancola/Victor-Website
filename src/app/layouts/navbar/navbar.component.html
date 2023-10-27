@@ -1,6 +1,5 @@
 <nav class="navbar">
   <div class="container">
-
     <div class="logo">
       <a routerLink="/">
         <img src="assets/images/logo.png" alt="">
@@ -19,11 +18,11 @@
     </div>
 
     <!-- Hamburger Button -->
-    <button class="hamburger-button">
+    <button class="hamburger-button" (click)="toggleSidenav()">
       <div *ngFor="let i of [1,2,3]" class="hamburger-line"></div>
     </button>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" [ngClass]="{'closed': !sideNavOpen}">
       <ul>
         <li *ngFor="let link of navLinks">
           <a [routerLink]="link.url" [ngClass]="{'btn': link.button}">
