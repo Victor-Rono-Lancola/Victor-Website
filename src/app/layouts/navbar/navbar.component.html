@@ -1,16 +1,16 @@
 <nav class="navbar">
   <div class="container">
-
     <div class="logo">
       <a routerLink="/">
-        <img src="assets/images/logo.png" alt="">
+        <!-- <img src="assets/images/logo.png" alt=""> -->
+        <h1 class="text-primary">Victor Rono</h1>
       </a>
     </div>
 
     <div class="main-menu">
       <ul>
         <li *ngFor="let link of navLinks">
-          <a [routerLink]="link.url" [ngClass]="{'btn': link.button}">
+          <a [href]="link.url" target="blank" [ngClass]="{'btn': link.button}">
             <i *ngIf="link.icon" class="fas" [ngClass]="link.icon"></i>
             {{link.title}}
           </a>
@@ -19,14 +19,14 @@
     </div>
 
     <!-- Hamburger Button -->
-    <button class="hamburger-button">
+    <button class="hamburger-button" (click)="toggleSidenav()">
       <div *ngFor="let i of [1,2,3]" class="hamburger-line"></div>
     </button>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" [ngClass]="{'closed': !sideNavOpen}">
       <ul>
         <li *ngFor="let link of navLinks">
-          <a [routerLink]="link.url" [ngClass]="{'btn': link.button}">
+          <a [routerLink]="link.url" [ngClass]="{'btn': link.button}" class="text-primary">
             <i *ngIf="link.icon" class="fas" [ngClass]="link.icon"></i>
             {{link.title}}
           </a>
