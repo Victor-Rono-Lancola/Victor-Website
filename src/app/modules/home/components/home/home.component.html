@@ -23,7 +23,7 @@
   <section class="video bg-black">
     <div class="container-sm">
       <h2 class="video-heading text-xl text-center">
-        Sites I have developed
+        Some Sites I have developed
       </h2>
       <div class="video-content">
         <a routerLink="/">
@@ -43,6 +43,7 @@
       </h3> -->
       <div class="testimonials-grid">
         <div class="card" *ngFor="let testimonial of testimonials" (click)="openLink(testimonial.company)">
+          <ngx-link-preview [url]="'https://'+testimonial.company"></ngx-link-preview>
           <strong>{{testimonial.client}}</strong>
           <h4 style="font-weight: normal;">{{testimonial.quote}}</h4>
           <!-- <p>{{testimonial.company}}</p> -->
@@ -121,17 +122,17 @@
   <!-- FAQ -->
   <section class="faq bg-light">
     <div class="container-sm">
-      <h3 class="text-xl text-center">Frequently Asked Questions</h3>
-      <ul class="faq-menu">
+      <h3 class="text-xl text-center">Skills and Capabilities</h3>
+      <!-- <ul class="faq-menu">
         <li class="active">All</li>
         <li>Getting Started</li>
         <li>Pricing</li>
-      </ul>
+      </ul> -->
       <div class="faq-content" #faqContent>
-        <div class="faq-group" *ngFor="let faq of FAQ">
+        <div class="faq-group" *ngFor="let faq of FAQ let i = index">
           <div class="faq-group-header">
             <h4 class="text-md">
-              {{faq.question}}
+              {{i + 1}}. {{faq.question}}
             </h4>
             <i class="icon fas fa-plus"></i>
           </div>

@@ -23,6 +23,7 @@ export class HomeComponent {
   }
 
   toggleFAQ() {
+    return;
     this.faqContent?.nativeElement.addEventListener('click', (event: Event) => {
 
       const groupHeader = (event.target as HTMLElement)?.closest('.faq-group-header');
