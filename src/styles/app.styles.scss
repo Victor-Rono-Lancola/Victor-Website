@@ -1,26 +1,26 @@
 // colors
-@import './src/app.colors.scss';
+@import "./src/app.colors.scss";
 
 // fonts
-@import './src/app.fonts.scss';
+@import "./src/app.fonts.scss";
 
 // images
-@import './src/app.images.scss';
+@import "./src/app.images.scss";
 
 // buttons
-@import './src/app.buttons.scss';
+@import "./src/app.buttons.scss";
 
 // utility classes
-@import './src/app.utility-classes.scss';
+@import "./src/app.utility-classes.scss";
 
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  max-width: 100vw;
 
-  body{
-    font-family: 'Poppins', sans-serif;
+  body {
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     background-color: var(--default-bg-color);
