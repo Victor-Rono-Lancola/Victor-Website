@@ -7,13 +7,14 @@
           Hello, My name is Victor, Am a full stack Dev.
         </h1>
         <p class="hero-text">
-          Organize, collaborate, and track progress seamlessly with our
-          one-stop-shop startup grow
-          th tool.
+          I have years of experience in Javascript, Typescript & PHP. I have worked with React, Vue and Angular to
+          develop web and Android apps. I also have experience in PHP and I have developed Laravel APIs and apps.
         </p>
         <div class="hero-buttons">
-          <a routerLink="/" class="btn btn-primary">Get Started</a>
-          <a routerLink="/" class="btn"><i class="fas fa-laptop"></i> Book a Demo</a>
+          <!-- <a routerLink="/" class="btn btn-primary">Source code</a> -->
+          <a class="btn btn-primary" target="blank" href="https://github.com/Victor-Rono-Lancola/Victor-Website"><i
+              class="fab fa-github"></i>
+            Source Code</a>
         </div>
       </div>
     </div>
@@ -22,30 +23,29 @@
   <section class="video bg-black">
     <div class="container-sm">
       <h2 class="video-heading text-xl text-center">
-        See how it works and get started in less than 2 minutes
+        Sites I have developed
       </h2>
       <div class="video-content">
         <a routerLink="/">
           <img src="assets/images/video-preview.png" alt="video" class="video-preview" />
         </a>
 
-        <a routerLink="/" class="btn btn-primary">Get Started</a>
+        <!-- <a routerLink="/" class="btn btn-primary">Get Started</a> -->
       </div>
     </div>
   </section>
   <!-- Testimonials -->
   <section class="testimonials bg-dark">
     <div class="container">
-      <h3 class="testimonials-heading text-xl">
+      <!-- <h3 class="testimonials-heading text-xl">
         Don't just take our word for it, see the success stories from
         businesses just like yours.
-      </h3>
+      </h3> -->
       <div class="testimonials-grid">
-        <div class="card" *ngFor="let testimonial of testimonials">
-          <p>{{testimonial.quote}}</p>
-
-          <p>{{testimonial.client}}</p>
-          <p>{{testimonial.company}}</p>
+        <div class="card" *ngFor="let testimonial of testimonials" (click)="openLink(testimonial.company)">
+          <strong>{{testimonial.client}}</strong>
+          <h4 style="font-weight: normal;">{{testimonial.quote}}</h4>
+          <!-- <p>{{testimonial.company}}</p> -->
         </div>
       </div>
     </div>
