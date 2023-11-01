@@ -17,7 +17,13 @@ export class HomeComponent {
     this.toggleFAQ();
   }
 
+  openLink(link: string) {
+    const url = 'https://' + link;
+    window.open(url, '_blank');
+  }
+
   toggleFAQ() {
+    return;
     this.faqContent?.nativeElement.addEventListener('click', (event: Event) => {
 
       const groupHeader = (event.target as HTMLElement)?.closest('.faq-group-header');
@@ -33,5 +39,7 @@ export class HomeComponent {
       groupBody?.classList.toggle('open');
 
     })
+
+
   }
 }
