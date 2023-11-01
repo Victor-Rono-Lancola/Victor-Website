@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "victor-rono": {
+      "hosting": {
+        "saas-project-angular": [
+          "victor-rono"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "victor-rono"
+  }
+}

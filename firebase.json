@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "saas-project-angular",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
